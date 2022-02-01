@@ -1,0 +1,53 @@
+.wrapper {
+  position: relative;
+  height: 100%;
+  .controlsWrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 2rem);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 2;
+  }
+  .fileInputWrapper {
+    display: flex;
+
+    gap: 0.5rem;
+  }
+  .controls {
+    display: flex;
+    gap: 1rem;
+    .colorInputWrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.2rem;
+    }
+    input[type="color"] {
+      cursor: pointer;
+      -webkit-appearance: none;
+      width: 100%;
+      height: 28px;
+      background-color: black;
+      border-radius: 4px;
+      outline: none;
+      border: none;
+    }
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 4px;
+    }
+    input[type="color"]::-webkit-color-swatch {
+      border-radius: 2px;
+      border: none;
+    }
+  }
+}
+
+.canvas {
+  cursor: grab;
+  &:active {
+    cursor: grabbing;
+  }
+}
